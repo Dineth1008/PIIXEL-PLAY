@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Shows - CineStream</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            padding: 120px 8% 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.9), var(--bg-color));
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--text-light);
+        }
+        .page-header h1 span {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><i class="fas fa-play-circle"></i> Cine<span>Stream</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="TvShow.html" style="color: var(--primary-color);">TV Shows</a>
+             <a href="Fav.html"><i class="fas fa-heart"></i> Favourites</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>All <span>TV Shows</span></h1>
+        <p style="color: var(--text-muted); margin-top: 10px;">Binge-watch your favorite series and episodes</p>
+    </div>
+
+    <div class="search-container" style="margin: 0 8% 40px;">
+        <input type="text" placeholder="Search TV shows..." id="searchInput">
+        <select>
+            <option value="">All Genres</option>
+            <option value="Action">Action & Adventure</option>
+            <option value="Drama">Drama</option>
+            <option value="Sci-Fi">Sci-Fi & Fantasy</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Mystery">Mystery</option>
+        </select>
+        <select>
+            <option value="">Status</option>
+            <option value="returning">Returning Series</option>
+            <option value="ended">Ended</option>
+        </select>
+        <button class="btn-search"><i class="fas fa-search"></i> Filter</button>
+    </div>
+
+    <section class="trending-section" style="padding-top: 0;">
+        <div class="movie-grid">
+            
+            <div class="movie-card">
+                <img src="Net.jpeg" alt="Stranger Things" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Stranger Things</h3>
+                    <div class="movie-meta">
+                        <span>Sci-Fi | 4 Seasons</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.7</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="Spi.jpeg" alt="Breaking Bad" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Breaking Bad</h3>
+                    <div class="movie-meta">
+                        <span>Drama | 5 Seasons</span>
+                        <span class="rating"><i class="fas fa-star"></i> 9.5</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="OIP.webp" alt="The Last of Us" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">The Last of Us</h3>
+                    <div class="movie-meta">
+                        <span>Action | 1 Season</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.8</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="loki.webp" alt="Loki" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Loki</h3>
+                    <div class="movie-meta">
+                        <span>Sci-Fi | 2 Seasons</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.2</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PixelPlay. Web Architecture Project </p>
+        <p>Dineth Kalu Arachchi</p>
+    </footer>

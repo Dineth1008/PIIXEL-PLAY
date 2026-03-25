@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favourites - CineStream</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .page-header {
+            padding: 120px 8% 40px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(11, 12, 16, 0.9), var(--bg-color));
+        }
+        .page-header h1 {
+            font-size: 3rem;
+            color: var(--text-light);
+        }
+        .page-header h1 span {
+            color: var(--primary-color);
+        }
+        
+    
+        .empty-state {
+            text-align: center;
+            padding: 50px 20px;
+            color: var(--text-muted);
+            display: none; 
+        }
+        .empty-state i {
+            font-size: 4rem;
+            color: rgba(255,255,255,0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><i class="fas fa-play-circle"></i> Cine<span>Stream</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="TvShow.html">TV Shows</a>
+            <a href="Fav.html" style="color: var(--primary-color);"><i class="fas fa-heart"></i> Favourites</a>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <h1>My <span>Favourites</span></h1>
+        <p style="color: var(--text-muted); margin-top: 10px;">Movies and TV Shows you've saved for later</p>
+    </div>
+
+    <section class="trending-section" style="padding-top: 20px; min-height: 50vh;">
+        
+        <div class="empty-state" id="emptyMessage">
+            <i class="fas fa-folder-open"></i>
+            <h2>No favourites yet!</h2>
+            <p>Go to Movies or TV Shows and click the heart icon to save them here.</p>
+        </div>
+
+        <div class="movie-grid" id="favouritesGrid">
+            
+            <div class="movie-card">
+                <img src="inter.jpeg" alt="Interstellar" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Interstellar</h3>
+                    <div class="movie-meta">
+                        <span>2014 | Sci-Fi</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.6</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav active" onclick="removeFavourite(this)" title="Remove from Favourites"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="Spi.jpeg" alt="Breaking Bad" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Breaking Bad</h3>
+                    <div class="movie-meta">
+                        <span>TV Show | Drama</span>
+                        <span class="rating"><i class="fas fa-star"></i> 9.5</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav active" onclick="removeFavourite(this)" title="Remove from Favourites"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="IMG.jpeg" alt="Parasite" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Parasite</h3>
+                    <div class="movie-meta">
+                        <span>2019 | Thriller</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.5</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav active" onclick="removeFavourite(this)" title="Remove from Favourites"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+   <footer>
+        <p>&copy; 2026 PixelPlay. Web Architecture Project </p>
+        <p>Dineth Kalu Arachchi</p>
+    </footer>
+
+
+</body>
+</html>

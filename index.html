@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay - Discover Great Movies</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+
+    <nav>
+        <a href="index.html" class="logo"><i class="fas fa-play-circle"></i> PIXEL<span>PLAY</span></a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="TvShow.html">TV Shows</a>
+            <a href="Fav.html"><i class="fas fa-heart"></i> Favourites</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Discover <span>Great</span> Movies</h1>
+        <p>Browse thousands of titles, save your favourites, and never run out of things to watch.</p>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search movies, shows..." id="searchInput">
+            <select>
+                <option value="">All Genres</option>
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Sci-Fi">Sci-Fi</option>
+                <option value="Horror">Horror</option>
+            </select>
+            <select>
+                <option value="">All Years</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+            </select>
+            <button class="btn-search"><i class="fas fa-search"></i> Search</button>
+        </div>
+    </header>
+
+    <section class="trending-section">
+        <div class="section-header">
+            <h2 class="section-title">Trending Now</h2>
+            <a href="#" class="view-all">View all <i class="fas fa-arrow-right"></i></a>
+        </div>
+        
+        <div class="movie-grid">
+            <div class="movie-card">
+                <img src="Dune-Part-Two.jpg" alt="Dune" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Dune: Part Two</h3>
+                    <div class="movie-meta">
+                        <span>2024 | Sci-Fi</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.5</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="movie-card">
+                <img src="Oppeneheimer.jpg" alt="oppenheimer " class="movie-img">>
+                <div class="movie-info">
+                    <h3 class="movie-title">Oppenheimer</h3>
+                    <div class="movie-meta">
+                        <span>2023 | Drama</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.9</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="inter.jpeg" alt="Interstellar" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Interstellar</h3>
+                    <div class="movie-meta">
+                        <span>2014 | Sci-Fi</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.6</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="IMG.jpeg" alt="Parasite" class="movie-img">
+                <div class="movie-info">
+                    <h3 class="movie-title">Parasite</h3>
+                    <div class="movie-meta">
+                        <span>2019 | Thriller</span>
+                        <span class="rating"><i class="fas fa-star"></i> 8.5</span>
+                    </div>
+                    <div class="actions">
+                        <a href="#" class="btn-details">View Details</a>
+                        <i class="fas fa-heart btn-fav" onclick="toggleFav(this)"></i>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PixelPlay. Web Architecture Project </p>
+        <p>Dineth Kalu Arachchi</p>
+    </footer>
+
+    <script>
+    
+        function toggleFav(element) {
+            event.stopPropagation();
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
